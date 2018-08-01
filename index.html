@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration:none;
+			}
+			#wrap{
+				width:100%;
+			}
+			.head{
+				width:100%;
+				background:#484848;
+			}
+			.main{
+				width:1240px;
+				height:36px;
+				margin:0 auto;
+			
+			}
+			.head ul li{
+				float:left;
+				height:36px;
+				line-height: 36px;
+				padding-right:21px;				
+			}
+			.head ul li a{
+				font-size:14px;
+				color:#aaaaaa;
+			}
+			.head ul li a:hover{
+				color:#fff;
+			}
+			.head .app{
+				/*position:relative;*/
+				float:right;
+				/*background:url(img/sj.jpg) no-repeat 36px bottom;*/
+			}
+			.head .app .appA{
+				display:block;
+				height:36px;
+				line-height: 36px;
+				padding:0 18px 0 24px;
+				background:url(img/sjapp.png) no-repeat left center;
+				font-size:14px;
+				color:#aaaaaa;
+			}
+			.head .app .appDown{
+				width:100%;
+				background:#fff;
+				position:absolute;
+				right:0;				
+				display:none;
+			}
+			.appDown .mainImg{
+				width:1240px;				
+				margin:0 auto;
+				position:relative;
+			}
+			.appDown .appImg{
+				width:1240px;
+				padding:10px 0;
+				background:#fff;
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			.appDown .down1{
+				width:125px;
+				height:28px;
+				display:block;
+				position:absolute;
+				left:375px;
+				top:217px;
+			}
+			.appDown .down2{
+				width:125px;
+				height:28px;
+				display:block;
+				position:absolute;
+				right:117px;
+				top:217px;
+			}
+			.appDown a img{
+				width:100%;
+				line-height: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="head">
+				<div class="main">
+					<ul>
+						<li><a href="#">商城</a></li>
+						<li><a href="#">魅族</a></li>
+						<li><a href="#">魅蓝</a></li>
+						<li><a href="#">Flyme</a></li>
+						<li><a href="#">云服务</a></li>
+						<li><a href="#">专卖店</a></li>
+						<li><a href="#">服务支持</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+					<div class="app">
+						<a href="#" class="appA">APP下载</a>	
+						<div class="appDown">
+							<div class="mainImg">
+								<img src="img/app.jpg" alt="" class="appImg"/>
+								<a href="#" class="down1"><img src="img/app_down1.png" alt="" /></a>
+								<a href="#" class="down2"><img src="img/app_down1.png" alt="" /></a>
+							</div>										
+						</div>
+						<script>
+							$(".app").hover(function() {
+								$(this).css("background","url(img/sj.jpg) no-repeat 36px bottom").find("a").css("color","#fff");
+								$(".appDown").show();
+							},function() {
+								$(this).css("background","").find("a").css("color","#aaaaaa");
+								$(".appDown").hide();
+							})
+						</script>						
+					</div>
+				</div>				
+			</div>
+			
+			<div class="nav"></div>
+			<div class="banner"></div>
+		</div>
+	</body>
+</html>
